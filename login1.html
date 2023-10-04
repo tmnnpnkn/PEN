@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <title>Toyota Kaennakorn</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/magnific-popup.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/animate.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+     <script type="text/javascript" src="js/calendar.js"></script>
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/tooplate-style.css">
+     <link rel="stylesheet" href="css/login.css">
+
+</head>
+
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+
+          </div>
+     </section>
+
+
+     <!-- HEADER -->
+     <!--<header>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12 text-align-center">
+                         <h22>TOYOTA</h22>
+                         <h21>KAENNAKORN</h21>
+                    </div>
+
+                    <div class="col-md-8 col-sm-7 text-align-right">
+                         <span class="phone-icon"><i class="fa fa-phone"></i> 043333444</span>
+                         <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 8:00 - 20:00 (Pon-Pt)</span>
+                         <span class="email-icon"><i class="fa fa-envelope-o"></i> <a
+                                   href="#">info@klinika.pl</a></span>
+                    </div>-->
+
+               </div>
+          </div>
+     </header>
+
+
+     <div class="content">
+          <!-- Nav pills -->
+          <ul class="nav nav-pills" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="pill" href="#login">เข้าสู่ระบบ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#regis">สมัครสมาชิก</a>
+            </li>
+          </ul>
+      
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div id="login" class="container tab-pane active">
+              <form action="php/login.php" method="post">
+                <div class="form-group">
+                  <label for="username">username</label>
+                  <input type="text" class="form-control is-valid" name="username" id="username" placeholder="username">
+                  
+                </div>
+                <div class="form-group">
+                  <label for="password">รหัสผ่าน</label>
+                  <input type="password" class="form-control is-invalid" name="password" id="password" placeholder="รหัสผ่าน">
+                  <!-- <small id="emailHelp" class="form-text text-muted">Password incorrect.</small> -->
+                </div>
+                <button type="submit" name="submit" class="btn btn-primary">ส่ง</button>
+                <!-- <br><label style="color: #423d3d;"><a href="logad.html" >admin</a></label> -->
+                <!-- <br/><p><?php echo $message; ?></p> -->
+              </form>
+            </div>
+            <div id="regis" class="container tab-pane fade">
+              <form action="php/regis.php" method="post">
+                <div class="form-group">
+                  <label for="InputName">ชื่อ</label>
+                  <input type="text" class="form-control is-valid" name="InputName" id="InputName" placeholder="ชื่อ">
+                  <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+                <div class="form-group">
+                  <label for="InputLname">นามสกุล</label>
+                  <input type="text" class="form-control is-valid" name="InputLname" id="InputLname" placeholder="นามสกุล">
+                  <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+                <div class="form-group">
+                  <label for="InputUsername">ชื่อผู้ใช้</label>
+                  <input type="text" class="form-control is-valid" name="InputUsername" id="InputUsername" placeholder="ชื่อผู้ใช้">
+                  <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+                <div class="form-group">
+                  <label for="email">อีเมลล์</label>
+                  <input type="email" class="form-control is-valid" name="email" id="email" placeholder="name@example.com">
+                  <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+                <div class="form-group">
+                  <label for="password2">รหัสผ่าน</label>
+                  <input type="password" class="form-control is-invalid" name="password1" id="password" placeholder="รหัสผ่าน">
+                </div>
+                <div class="form-group">
+                  <label for="password2">รหัสผ่านอีกครั้ง</label>
+                  <input type="password" class="form-control is-invalid" name="password2" id="password" placeholder="รหัสผ่าน">
+                </div>
+              
+                <button type="submit" name="submitr" class="btn btn-primary">ส่ง</button>
+                
+                
+              </form>
+            </div>
+          </div>
+        </div>
+</body>
+
+
+<!-- SCRIPTS -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/magnific-popup-options.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/custom.js"></script>
+
+
+
+</html>
