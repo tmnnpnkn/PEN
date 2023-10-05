@@ -67,7 +67,7 @@ $resultPrdType = $resPrdType->fetch_all(MYSQLI_ASSOC);
                         <br>
                     </form>
                 <?php } ?>
-                <h3>จัดการข้อมูลสินค้า
+                <h3>เพิ่มสินค้าใหม่
                     <a href="formAddProduct.php?act=add" class="btn btn-info btn-sm">+สินค้า</a>
                 </h3>
                 <table class="table table-striped  table-hover table-responsive table-bordered">

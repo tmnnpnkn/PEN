@@ -6,10 +6,11 @@ session_start();
 if (isset($_POST['updatebtn'])) {
   $id = $_POST['edit_id'];
   $username = $_POST['edit_username'];
-  $email = $_POST['edit_email'];
+  $tel = $_POST['edit_tel'];
   $password = $_POST['edit_password'];
+  $role = $_POST['edit_role'];
 
-  $query = "UPDATE user SET Username='$username', Email='$email', Password ='$password' WHERE id='$id' ";
+  $query = "UPDATE user SET Username='$username', Tel='$tel', Password ='$password' , Role = $role WHERE id='$id' ";
   $query_run = mysqli_query($conn, $query);
 
   if ($query_run) {
@@ -285,9 +286,10 @@ if (isset($_POST['registerbtn'])) {
   $name = $_POST['name'];
   $lastname = $_POST['lastname'];
   $username = $_POST['username'];
-  $email = $_POST['email'];
+  $tel = $_POST['tel'];
   $password = $_POST['password'];
   $cpassword = $_POST['confirmpassword'];
+  $role = $_POST['role'];
 
   if (empty($name)) {
     echo "<script>alert('กรุณาใส่ชื่อ...'); window.history.back();</script>";
@@ -298,14 +300,14 @@ if (isset($_POST['registerbtn'])) {
   if (empty($username)) {
     echo "<script>alert('กรุณาใส่username...'); window.history.back();</script>";
   }
-  if (empty($email)) {
-    echo "<script>alert('กรุณาใส่email...'); window.history.back();</script>";
+  if (empty($tel)) {
+    echo "<script>alert('กรุณาใส่เบอร์โทร...'); window.history.back();</script>";
   }
   if (empty($password)) {
     echo "<script>alert('กรุณาใส่password...'); window.history.back();</script>";
   } else {
 
-    $eu_query = "SELECT * FROM user WHERE Username ='$username' OR Email='$email' ";
+    $eu_query = "SELECT * FROM user WHERE Username ='$username' OR Tel='$tel' ";
     $eu_query_run = mysqli_query($conn, $eu_query);
     if (mysqli_num_rows($eu_query_run) > 0) {
       // $_SESSION['status'] = "Username or Email Already Taken. Please Try Another one.";
@@ -314,7 +316,7 @@ if (isset($_POST['registerbtn'])) {
       // header('Location: register.php');
     } else {
       if ($password == $cpassword) {
-        $query = "INSERT INTO user (Name,Lastname,Username,Email,Password) VALUES ('$name','$lastname','$username','$email','$password')";
+        $query = "INSERT INTO user (Name,Lastname,Username,Tel,Password,Role) VALUES ('$name','$lastname','$username','$tel','$password','$role')";
         $query_run = mysqli_query($conn, $query);
 
         if ($query_run) {
